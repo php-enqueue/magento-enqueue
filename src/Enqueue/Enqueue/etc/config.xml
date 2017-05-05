@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Enqueue_Enqueue>
+            <version>0.1</version>
+        </Enqueue_Enqueue>
+    </modules>
+    <global>
+        <models>
+            <enqueue>
+                <class>Enqueue_Enqueue_Model</class>
+            </enqueue>
+        </models>
+        <helpers>
+            <enqueue>
+                <class>Enqueue_Enqueue_Helper</class>
+            </enqueue>
+        </helpers>
+    </global>
+    <default>
+        <enqueue>
+            <transport>
+                <default>rabbitmq-amqp</default>
+            </transport>
+            <rabbitmq>
+                <host>localhost</host>
+                <port>5672</port>
+                <login>guest</login>
+                <password>guest</password>
+                <vhost>/</vhost>
+            </rabbitmq>
+            <client>
+                <prefix>enqueue</prefix>
+                <app_name>app</app_name>
+                <router_topic>router</router_topic>
+                <router_queue>default</router_queue>
+                <default_processor_queue>default</default_processor_queue>
+                <redelivered_delay_time>0</redelivered_delay_time>
+            </client>
+        </enqueue>
+    </default>
+</config>
