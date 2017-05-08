@@ -1,11 +1,40 @@
 <?php
 
+use Enqueue\Psr\PsrProcessor;
+
 class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
 {
     /**
      * @var \Enqueue\Client\SimpleClient
      */
     private $client;
+
+    public function bindProcessors()
+    {
+        if (false == $processors = Mage::getStoreConfig('enqueue/processors')) {
+            return;
+        }
+
+        foreach ($processors as $name => $config) {
+            if (empty($config['topic'])) {
+                throw new \LogicException('Topic name is not set for processor: "%s"', $name);
+            }
+
+            if (empty($config['helper'])) {
+                throw new \LogicException('Helper name is not set for processor: "%s"', $name);
+            }
+
+            $this->getClient()->bind($config['topic'], $name, function () use ($config) {
+                $processor = Mage::helper($config['helper']);
+
+                if (false == $processor instanceof PsrProcessor) {
+                    throw new \LogicException();
+                }
+
+                call_user_func_array([$processor, 'process'], func_get_args());
+            });
+        }
+    }
 
     public function getClient()
     {

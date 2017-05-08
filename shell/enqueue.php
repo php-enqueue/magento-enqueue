@@ -20,15 +20,14 @@ $loader = require $dir.'/../app/Mage.php';
 // init
 Mage::app('admin', 'store');
 
-/** @var \Enqueue\Client\SimpleClient $client */
-$client = Mage::helper('enqueue')->getClient();
+/** @var \Enqueue_Enqueue_Helper_Data $enqueue */
+$enqueue = Mage::helper('enqueue');
+$enqueue->bindProcessors();
 
-//bind message processor
-//$helper = Mage::helper('helper-name');
-//$client->bind('topic', 'consumer-name', [$helper, 'method-name']);
+/** @var \Enqueue\Client\SimpleClient $client */
+$client = $enqueue->getClient();
 
 $application = new Application();
-
 $application->add(new SetupBrokerCommand($client->getDriver()));
 $application->add(new ProduceMessageCommand($client->getProducer()));
 $application->add(new QueuesCommand($client->getQueueMetaRegistry()));
