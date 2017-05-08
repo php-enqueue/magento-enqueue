@@ -17,18 +17,18 @@ class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
 
         foreach ($processors as $name => $config) {
             if (empty($config['topic'])) {
-                throw new \LogicException('Topic name is not set for processor: "%s"', $name);
+                throw new \LogicException(sprintf('Topic name is not set for processor: "%s"', $name));
             }
 
             if (empty($config['helper'])) {
-                throw new \LogicException('Helper name is not set for processor: "%s"', $name);
+                throw new \LogicException(sprintf('Helper name is not set for processor: "%s"', $name));
             }
 
             $this->getClient()->bind($config['topic'], $name, function () use ($config) {
                 $processor = Mage::helper($config['helper']);
 
                 if (false == $processor instanceof PsrProcessor) {
-                    throw new \LogicException();
+                    throw new \LogicException(sprintf('Expects processor is instance of: "%s"', PsrProcessor::class));
                 }
 
                 call_user_func_array([$processor, 'process'], func_get_args());
