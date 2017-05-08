@@ -37,7 +37,7 @@ class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
                     throw new \LogicException(sprintf('Expects processor is instance of: "%s"', PsrProcessor::class));
                 }
 
-                call_user_func_array([$processor, 'process'], func_get_args());
+                return call_user_func_array([$processor, 'process'], func_get_args());
             });
         }
     }
