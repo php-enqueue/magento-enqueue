@@ -83,6 +83,9 @@ class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
         return $this->client;
     }
 
+    /**
+     * @return \Enqueue\Client\SimpleClient
+     */
     public function buildRabbitMqAmqp()
     {
         $config = [
@@ -101,6 +104,9 @@ class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
         );
     }
 
+    /**
+     * @return \Enqueue\Client\Config
+     */
     public function buildConfig()
     {
         return new \Enqueue\Client\Config(
