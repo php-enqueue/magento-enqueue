@@ -1,5 +1,6 @@
 <?php
 
+use Enqueue\Client\Message;
 use Enqueue\Psr\PsrProcessor;
 
 class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
@@ -8,6 +9,11 @@ class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
      * @var \Enqueue\Client\SimpleClient
      */
     private $client;
+
+    /**
+     * @var \Enqueue\Client\ProducerInterface
+     */
+    private $producer;
 
     public function bindProcessors()
     {
@@ -36,6 +42,30 @@ class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
         }
     }
 
+    /**
+     * @param string               $topic
+     * @param string|array|Message $message
+     */
+    public function send($topic, $message)
+    {
+        $this->getProducer()->send($topic, $message);
+    }
+
+    /**
+     * @return \Enqueue\Client\ProducerInterface
+     */
+    public function getProducer()
+    {
+        if (null === $this->producer) {
+            $this->producer = $this->getClient()->getProducer();
+        }
+
+        return $this->producer;
+    }
+
+    /**
+     * @return \Enqueue\Client\SimpleClient
+     */
     public function getClient()
     {
         if (null === $this->client) {
