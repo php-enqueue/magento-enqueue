@@ -4,7 +4,7 @@
 [![Total Downloads](https://poser.pugx.org/enqueue/magento-enqueue/d/total.png)](https://packagist.org/packages/enqueue/magento-enqueue)
 [![Latest Stable Version](https://poser.pugx.org/enqueue/magento-enqueue/version.png)](https://packagist.org/packages/enqueue/magento-enqueue)
  
-This is Enqueue for Magento 
+The extension adds messaging capabilities to Magento application.
 
 ## Resources
 
