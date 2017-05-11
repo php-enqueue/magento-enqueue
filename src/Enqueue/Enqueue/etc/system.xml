@@ -388,6 +388,7 @@
                     <show_in_default>1</show_in_default>
                     <show_in_website>0</show_in_website>
                     <show_in_store>0</show_in_store>
+                    <comment><![CDATA[<strong style="color:orange">Note!</strong> <strong>Client:Router Topic</strong> and <strong>Client:Router Queue</strong> must be equal for this transport.]]></comment>
                     <fields>
                         <store_dir translate="label">
                             <label>Store directory</label>
@@ -546,7 +547,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
-                            <comment><![CDATA[<a target="_blank" href="http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url">Connecting using a URL</a>]]></comment>
+                            <comment><![CDATA[<a target="_blank" href="http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url">Connecting using a URL</a> Example: mysql://user:password@host:port/dbname?charset=UTF8]]></comment>
                         </url>
                         <table_name translate="label">
                             <label>Table name</label>

@@ -24,7 +24,7 @@ Mage::app('admin', 'store');
 $enqueue = Mage::helper('enqueue');
 $enqueue->bindProcessors();
 
-/** @var \Enqueue\Client\SimpleClient $client */
+/** @var \Enqueue\SimpleClient\SimpleClient $client */
 $client = $enqueue->getClient();
 
 $application = new Application();
@@ -34,7 +34,7 @@ $application->add(new QueuesCommand($client->getQueueMetaRegistry()));
 $application->add(new TopicsCommand($client->getTopicMetaRegistry()));
 $application->add(new ConsumeMessagesCommand(
     $client->getQueueConsumer(),
-    $client->getProcessor(),
+    $client->getDelegateProcessor(),
     $client->getQueueMetaRegistry(),
     $client->getDriver()
 ));

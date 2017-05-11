@@ -3,8 +3,6 @@
   "type": "magento-module",
   "description": "Enqueue Message Queue for Magento",
   "require": {
-    "enqueue/amqp-ext": "^0.3",
-    "enqueue/dbal": "^0.3",
     "enqueue/enqueue": "^0.3",
     "enqueue/simple-client": "^0.3"
   },

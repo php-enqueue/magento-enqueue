@@ -1,8 +1,8 @@
 <?php
 
 use Enqueue\Client\Message;
-use Enqueue\Client\SimpleClient;
 use Enqueue\Psr\PsrProcessor;
+use Enqueue\SimpleClient\SimpleClient;
 
 class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
 {
@@ -232,10 +232,12 @@ class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
     public function getDbalConfig()
     {
         return ['dbal' => [
-            'url' => Mage::getStoreConfig('enqueue/redis/url'),
-            'table_name' => Mage::getStoreConfig('enqueue/redis/table_name'),
-            'polling_interval' => (int) Mage::getStoreConfig('enqueue/redis/polling_interval'),
-            'lazy' => (bool) Mage::getStoreConfig('enqueue/redis/lazy'),
+            'connection' => [
+                'url' => Mage::getStoreConfig('enqueue/dbal/url'),
+            ],
+            'table_name' => Mage::getStoreConfig('enqueue/dbal/table_name'),
+            'polling_interval' => (int) Mage::getStoreConfig('enqueue/dbal/polling_interval'),
+            'lazy' => (bool) Mage::getStoreConfig('enqueue/dbal/lazy'),
         ]];
     }
 }
