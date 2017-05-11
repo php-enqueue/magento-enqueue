@@ -40,12 +40,16 @@
                 <delay_plugin_installed>0</delay_plugin_installed>
             </rabbitmq_amqp>
             <amqp>
+                <port>5672</port>
                 <lazy>1</lazy>
             </amqp>
             <rabbitmq_stomp>
+                <management_plugin_port>15672</management_plugin_port>
+                <port>61613</port>
                 <lazy>1</lazy>
             </rabbitmq_stomp>
             <stomp>
+                <port>61613</port>
                 <lazy>1</lazy>
             </stomp>
             <fs>
@@ -57,6 +61,7 @@
                 <lazy>1</lazy>
             </sqs>
             <redis>
+                <port>6379</port>
                 <lazy>1</lazy>
             </redis>
             <dbal>
