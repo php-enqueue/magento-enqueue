@@ -92,6 +92,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
+                            <validate>validate-number</validate>
                         </redelivered_delay_time>
                     </fields>
                 </client>
@@ -119,6 +120,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
+                            <validate>validate-number</validate>
                         </port>
                         <login translate="label">
                             <label>Login</label>
@@ -189,6 +191,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
+                            <validate>validate-number</validate>
                         </port>
                         <login translate="label">
                             <label>Login</label>
@@ -250,6 +253,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
+                            <validate>validate-number</validate>
                         </port>
                         <login translate="label">
                             <label>Login</label>
@@ -311,6 +315,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
+                            <validate>validate-number</validate>
                         </port>
                         <login translate="label">
                             <label>Login</label>
@@ -371,6 +376,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
+                            <validate>validate-number</validate>
                         </management_plugin_port>
                     </fields>
                 </rabbitmq_stomp>
@@ -400,6 +406,7 @@
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
                             <comment>The option tells how many messages should be read from file at once. The feature saves resources but could lead to bigger messages lose.</comment>
+                            <validate>validate-number</validate>
                         </pre_fetch_count>
                         <chmod translate="label">
                             <label>Filesystem permissions</label>
@@ -409,6 +416,7 @@
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
                             <comment>The queue files are created with this given permissions if not exist.</comment>
+                            <validate>validate-number</validate>
                         </chmod>
                     </fields>
                 </fs>
@@ -461,6 +469,7 @@
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
                             <comment>Configures the maximum number of allowed retries for a client (pass 0 to disable retries)</comment>
+                            <validate>validate-number</validate>
                         </retries>
                         <lazy translate="label">
                             <label>Lazy Connection</label>
@@ -498,6 +507,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
+                            <validate>validate-number</validate>
                         </port>
                         <vendor translate="label">
                             <label>Default</label>
@@ -553,6 +563,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
+                            <validate>validate-number</validate>
                         </polling_interval>
                         <lazy translate="label">
                             <label>Lazy Connection</label>

@@ -39,6 +39,15 @@
                 <lazy>1</lazy>
                 <delay_plugin_installed>0</delay_plugin_installed>
             </rabbitmq_amqp>
+            <amqp>
+                <lazy>1</lazy>
+            </amqp>
+            <rabbitmq_stomp>
+                <lazy>1</lazy>
+            </rabbitmq_stomp>
+            <stomp>
+                <lazy>1</lazy>
+            </stomp>
             <fs>
                 <pre_fetch_count>1</pre_fetch_count>
                 <chmod>0600</chmod>
