@@ -9,7 +9,7 @@ This is Enqueue for Magento
 ## Resources
 
 * [Enqueue Documentation](https://github.com/php-enqueue/enqueue-dev/blob/master/docs/index.md)
-* [Extension Documenation]https://github.com/php-enqueue/enqueue-dev/blob/master/docs/magento/quick_tour.md
+* [Extension Documenation](https://github.com/php-enqueue/enqueue-dev/blob/master/docs/magento/quick_tour.md)
 * [Questions](https://gitter.im/php-enqueue/Lobby)
 * [Issue Tracker](https://github.com/php-enqueue/enqueue-dev/issues)
 
