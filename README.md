@@ -1,103 +1,26 @@
+# Magento Enqueue extension
 
-Magento PHP Enqueue Integration
-===============================
+[![Gitter](https://badges.gitter.im/php-enqueue/Lobby.svg)](https://gitter.im/php-enqueue/Lobby)
+[![Total Downloads](https://poser.pugx.org/enqueue/magento-enqueue/d/total.png)](https://packagist.org/packages/enqueue/magento-enqueue)
+[![Latest Stable Version](https://poser.pugx.org/enqueue/magento-enqueue/version.png)](https://packagist.org/packages/enqueue/magento-enqueue)
+ 
+The extension adds messaging capabilities to Magento application.
 
-Install
--------
-We use magento composer installer to install this module.
-See more https://github.com/Cotya/magento-composer-installer
+## Resources
 
-Example of `composer.json`:
+* [Enqueue Documentation](https://github.com/php-enqueue/enqueue-dev/blob/master/docs/index.md)
+* [Extension Documenation](https://github.com/php-enqueue/enqueue-dev/blob/master/docs/magento/quick_tour.md)
+* [Questions](https://gitter.im/php-enqueue/Lobby)
+* [Issue Tracker](https://github.com/php-enqueue/enqueue-dev/issues)
 
-```json
-{
-    "name": "magento/project",
-    "description": "Magento Project",
-    "repositories": [
-      {
-        "type": "vcs",
-        "url": "git@github.com:AydinHassan/magento-community.git"
-      }
-    ],
-    "require": {
-        "magento-hackathon/magento-composer-installer": "~3.0",
-        "aydin-hassan/magento-core-composer-installer" : "~1.0",
-        "magento/magento" : "1.9.1.0",
-        "enqueue/magento-enqueue": "*@dev"
-    },
-    "extra":{
-        "magento-root-dir": "web/"
-    }
-}
-```
+## Developed by Forma-Pro
 
-Publish Message
----------------
+Forma-Pro is a full stack development company which interests also spread to open source development. 
+Being a team of strong professionals we have an aim an ability to help community by developing cutting edge solutions in the areas of e-commerce, docker & microservice oriented architecture where we have accumulated a huge many-years experience. 
+Our main specialization is Symfony framework based solution, but we are always looking to the technologies that allow us to do our job the best way. We are committed to creating solutions that revolutionize the way how things are developed in aspects of architecture & scalability.
 
-```php
+If you have any questions and inquires about our open source development, this product particularly or any other matter feel free to contact at opensource@forma-pro.com
 
-Mage::helper('enqueue')->send('async-job', 'payload');
+## License
 
-```
-
-Message Consumer Class
-----------------------
-```php
-<?php
-
-use Enqueue\Psr\PsrContext;
-use Enqueue\Psr\PsrMessage;
-use Enqueue\Psr\PsrProcessor;
-
-class Acme_Module_Helper_Async_Job implements PsrProcessor
-{
-    public function process(PsrMessage $message, PsrContext $context)
-    {
-        // do job
-        // $message->getBody() -> 'payload'
-
-        return self::ACK;         // acknowledge message
-        // return self::REJECT;   // reject message
-        // return self::REQUEUE;  // requeue message
-    }
-}
-```
-
-Bind message processor to topic
--------------------------------
-
-app/etc/local.xml
-```xml
-<config>
-  <default>
-    <enqueue>
-      <processors>
-        <async-job-processor>
-          <topic>async-job</topic>
-          <helper>acme/async_job</helper>
-        </async-job-processor>
-        <processor2>
-          <topic>topic2</topic>
-          <helper>magento-helper-name2</helper>
-        </processor2>
-      </processors>
-    </enqueue>
-  </default>
-</config>
-```
-
-Run message consumer
---------------------
-```bash
-bash/> php shell/enqueue.php enqueue:consume -vvv --setup-broker
-```
-
-More console commands
----------------------
-```bash
-  enqueue:consume       [enq:c] A client's worker that processes messages. By default it connects to default queue. It select an appropriate message processor based on a message headers
-  enqueue:produce       [enq:p] A command to send a message to topic
-  enqueue:queues        [enq:m:q|debug:enqueue:queues] A command shows all available queues and some information about them.
-  enqueue:setup-broker  [enq:sb] Creates all required queues
-  enqueue:topics        [enq:m:t|debug:enqueue:topics] A command shows all available topics and some information about them.
-```
+It is released under the [MIT License](LICENSE).
