@@ -2,6 +2,7 @@
   "name": "enqueue/magento-enqueue",
   "type": "magento-module",
   "description": "Enqueue Message Queue for Magento",
+  "license": "MIT",
   "keywords": ["messaging", "queue", "amqp", "magento", "rabbitmq", "kafka", "redis", "sqs", "google-pubsub", "amazon-sqs"],
   "require": {
     "enqueue/enqueue": "^0.3",
