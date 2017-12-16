@@ -1,9 +1,9 @@
 {
   "name": "enqueue/magento-enqueue",
   "type": "magento-module",
-  "description": "Enqueue Message Queue for Magento",
+  "description": "Message Queue solutions for Magento. Supports RabbitMQ, AMQP, STOMP, Amazon SQS, Kafka, Redis, Google PubSub, Gearman, Beanstalk",
   "license": "MIT",
-  "keywords": ["messaging", "queue", "amqp", "magento", "rabbitmq", "kafka", "redis", "sqs", "google-pubsub", "amazon-sqs"],
+  "keywords": ["messaging", "queue", "amqp", "magento", "rabbitmq", "kafka", "redis", "sqs", "google-pubsub", "amazon-sqs", "gearman", "beanstalk"],
   "require": {
     "enqueue/enqueue": "^0.3",
     "enqueue/simple-client": "^0.3"
