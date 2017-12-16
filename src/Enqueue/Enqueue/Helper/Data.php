@@ -1,13 +1,13 @@
 <?php
 
 use Enqueue\Client\Message;
-use Enqueue\Psr\PsrProcessor;
 use Enqueue\SimpleClient\SimpleClient;
+use Interop\Queue\PsrProcessor;
 
 class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
 {
     /**
-     * @var \Enqueue\Client\SimpleClient
+     * @var SimpleClient
      */
     private $client;
 
@@ -56,7 +56,7 @@ class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
     }
 
     /**
-     * @return \Enqueue\Client\SimpleClient
+     * @return SimpleClient
      */
     public function getClient()
     {

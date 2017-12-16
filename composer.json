@@ -5,8 +5,8 @@
   "license": "MIT",
   "keywords": ["messaging", "queue", "amqp", "magento", "rabbitmq", "kafka", "redis", "sqs", "google-pubsub", "amazon-sqs", "gearman", "beanstalk"],
   "require": {
-    "enqueue/enqueue": "^0.3",
-    "enqueue/simple-client": "^0.3"
+    "enqueue/enqueue": "^0.8",
+    "enqueue/simple-client": "^0.8"
   },
   "extra":{
     "map": [
