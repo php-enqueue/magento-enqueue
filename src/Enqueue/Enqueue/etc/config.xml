@@ -33,11 +33,10 @@
             <rabbitmq_amqp>
                 <host>localhost</host>
                 <port>5672</port>
-                <login>guest</login>
-                <password>guest</password>
+                <user>guest</user>
+                <pass>guest</pass>
                 <vhost>/</vhost>
                 <lazy>1</lazy>
-                <delay_plugin_installed>0</delay_plugin_installed>
             </rabbitmq_amqp>
             <amqp>
                 <port>5672</port>
