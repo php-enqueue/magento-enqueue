@@ -145,8 +145,8 @@ class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
         return ['amqp' => [
             'host' => Mage::getStoreConfig('enqueue/amqp/host'),
             'port' => (int) Mage::getStoreConfig('enqueue/amqp/port'),
-            'login' => Mage::getStoreConfig('enqueue/amqp/login'),
-            'password' => Mage::getStoreConfig('enqueue/amqp/password'),
+            'user' => Mage::getStoreConfig('enqueue/amqp/user'),
+            'pass' => Mage::getStoreConfig('enqueue/amqp/pass'),
             'vhost' => Mage::getStoreConfig('enqueue/amqp/vhost'),
             'lazy' => (bool) Mage::getStoreConfig('enqueue/amqp/lazy'),
         ]];
