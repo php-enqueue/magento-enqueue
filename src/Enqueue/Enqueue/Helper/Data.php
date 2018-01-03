@@ -130,11 +130,10 @@ class Enqueue_Enqueue_Helper_Data extends Mage_Core_Helper_Data
         return ['rabbitmq_amqp' => [
             'host' => Mage::getStoreConfig('enqueue/rabbitmq_amqp/host'),
             'port' =>  (int) Mage::getStoreConfig('enqueue/rabbitmq_amqp/port'),
-            'login' => Mage::getStoreConfig('enqueue/rabbitmq_amqp/login'),
-            'password' => Mage::getStoreConfig('enqueue/rabbitmq_amqp/password'),
+            'user' => Mage::getStoreConfig('enqueue/rabbitmq_amqp/user'),
+            'pass' => Mage::getStoreConfig('enqueue/rabbitmq_amqp/pass'),
             'vhost' => Mage::getStoreConfig('enqueue/rabbitmq_amqp/vhost'),
             'lazy' => (bool) Mage::getStoreConfig('enqueue/rabbitmq_amqp/lazy'),
-            'delay_plugin_installed' => (bool) Mage::getStoreConfig('enqueue/rabbitmq_amqp/delay_plugin_installed'),
         ]];
     }
 

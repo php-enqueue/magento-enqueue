@@ -123,22 +123,22 @@
                             <show_in_store>-</show_in_store>
                             <validate>validate-number</validate>
                         </port>
-                        <login translate="label">
-                            <label>Login</label>
+                        <user translate="label">
+                            <label>User</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
-                        </login>
-                        <password translate="label">
+                        </user>
+                        <pass translate="label">
                             <label>Password</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
-                        </password>
+                        </pass>
                         <vhost translate="label">
                             <label>Virtual Host</label>
                             <frontend_type>text</frontend_type>
@@ -157,15 +157,6 @@
                             <show_in_store>-</show_in_store>
                             <comment>Connection will be performed as later as possible.</comment>
                         </lazy>
-                        <delay_plugin_installed translate="label">
-                            <label>Delay plugin installed</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>7</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>0</show_in_website>
-                            <show_in_store>-</show_in_store>
-                        </delay_plugin_installed>
                     </fields>
                 </rabbitmq_amqp>
                 <amqp translate="label">
@@ -194,22 +185,22 @@
                             <show_in_store>-</show_in_store>
                             <validate>validate-number</validate>
                         </port>
-                        <login translate="label">
-                            <label>Login</label>
+                        <user translate="label">
+                            <label>User</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
-                        </login>
-                        <password translate="label">
+                        </user>
+                        <pass translate="label">
                             <label>Password</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>-</show_in_store>
-                        </password>
+                        </pass>
                         <vhost translate="label">
                             <label>Virtual Host</label>
                             <frontend_type>text</frontend_type>
